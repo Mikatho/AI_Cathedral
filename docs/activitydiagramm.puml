@@ -1,0 +1,17 @@
+@startuml
+
+start
+:check which turn it is;
+switch (check turn)
+case ( turn == 1)
+:return random placement for cathedral >
+stop
+case ( turn == 2) 
+:place academy furthest away from cathedral >
+stop
+case (default )
+:call getPlacementMethode with n - rounds m - maxdepth;
+endswitch
+
+stop
+@enduml
